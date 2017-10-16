@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>register</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div id="yummy"><h1>YUMMY RECEPIE</h1></div>
+    <h1>Register</h1>
+    <form>
+      <label for="username"><p> Username</p> </label>
+      <input type="text" id="username" />
+      <label for="password"><p>Password:</p> </label>
+      <input type="password" id="password" />
+      <label for="confirm-password"><p>Confirm Password:</p> </label>
+      <input type="password" id="confirm-password" /><br />
+      <button type="submit" class="btn btn-primary"><p> Sign up</p></button>
+      <a href="index.html"><p>You already have an account login here...</p> </a>
+    </form>
+  </div>
+  <script type="text/javascript" src="js/lib/jquery.js"></script>
+  <script type="text/javascript" src="dpd.js"></script>
+  <script type="text/javascript">
+    $('form').submit(function() {
+      var username = $('#username').val();
+      var password = $('#password').val();
+      var confirmPassword = $('#confirm-password').val();
+
+      if (!username) {
+        alert("Username is required");
+      } else if (!password) {
+        alert("Password is required");
+      } else if (password !== confirmPassword) {
+        alert("Passwords do not match");
+      } else {
+        dpd.users.post({username: username, password: password}, function(user, error) {
+          if (error) {
+            alert(JSON.stringify(error));
+          } else {
+            location.href = "index.html";
+          }
+        });  
+      }
+
+      return false;
+    });
+  </script>
+</body>
+</html>

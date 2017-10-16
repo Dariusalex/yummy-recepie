@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> login </title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div id="yummy"><h1>YUMMY RECEPIE</h1></div>
+  	<h1>Login</h1>
+  	<form>
+      <label for="username"><p>Username:</p> </label>
+      <input type="text" id="username" />
+      <label for="password"><p>Password:</p> </label>
+      <input type="password" id="password" /><br />
+       <a href="home.html" class="btn btn-primary"><p>login</p> </a>
+
+     
+      <a href="register.html"><p>You wanna join us ??</p> </a>
+    </form>
+  </div>
+  <script type="text/javascript" src="js/lib/jquery.js"></script>
+  <script type="text/javascript" src="dpd.js"></script>
+  <script type="text/javascript">
+    dpd.users.me(function(user) {
+      if (user) {
+        location.href = "welcome.html";
+      }
+    });
+
+    $('form').submit(function() {
+      var username = $('#username').val();
+      var password = $('#password').val();
+
+      dpd.users.login({username: username, password: password}, function(session, error) {
+        if (error) {
+          alert(error.message);
+        } else {
+          location.href = "welcome.html";
+        }
+      });
+
+      return false;
+    });
+  </script>
+</body>
+</html>
