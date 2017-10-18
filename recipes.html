@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> recepie </title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div id="yummy"><h1>YUMMY RECEPIE</h1></div>
+    <div class="row" id="cont">
+      
+      <div class="col-md-12"><div id="TT">MAIN DISHES</div>
+                             
+        <img src="images/bg1.jpg"><div id="HH">Easy steps to make american tacos</div><p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by of the more obscure Latin words, consectetur, from a Lorem Ipsum passage,<p> <div id="BTN"><a href="#">add</a> <a href="#">edit</a>  <a href="#">delete</a></div></div>
+    </div>
+
+<div class="row" id="cont">
+      
+      <div class="col-md-12"><div id="TT">INDIAN CUSINE</div>
+                             
+        <img src="images/bg6.jpg"><div id="HH">Rotti from the great chefs of Mumbai</div><p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by of the more obscure Latin words, consectetur, from a Lorem Ipsum passage,<p> <div id="BTN"><a href="#">add</a><a href="#">edit</a>  <a href="#">delete</a></div></div>
+    </div>
+
+
+
+    <div class="row" id="cont">
+      
+      <div class="col-md-12"><div id="TT">RESTURANT DESERTS</div>
+                             
+        <img src="images/bg4.jpg"><div id="HH">Its a sunny day and you wanna cool down?</div><p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by of the more obscure Latin words, consectetur, from a Lorem Ipsum passage,<p> <div id="BTN"><a href="#">add</a><a href="#">edit</a>  <a href="#">delete</a></div></div>
+    </div>
+
+
+    <div id="hom"> <a href="#" >next>>> </a><a href="index.html" >home </a></div>
+
+
+
+    
+  </div>
+  <script type="text/javascript" src="js/lib/jquery.js"></script>
+  <script type="text/javascript" src="dpd.js"></script>
+  <script type="text/javascript">
+    dpd.users.me(function(user) {
+      if (user) {
+        location.href = "welcome.html";
+      }
+    });
+
+    $('form').submit(function() {
+      var username = $('#username').val();
+      var password = $('#password').val();
+
+      dpd.users.login({username: username, password: password}, function(session, error) {
+        if (error) {
+          alert(error.message);
+        } else {
+          location.href = "welcome.html";
+        }
+      });
+
+      return false;
+    });
+  </script>
+</body>
+</html>
