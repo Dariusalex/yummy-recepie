@@ -5777,3 +5777,64 @@ p{
     color: #006dcc;
 }
 
+#cont img{
+    height: 254px;
+     float: left;
+ 
+ }
+ 
+ #cont{
+ 	    margin-top: 88px;
+     float: left;
+     margin-left: 27px;
+     background-color: rgba(240, 242, 243, 0.7);
+     padding-left: 10;
+     padding: 10px;
+     border-radius: 15px;
+     padding-bottom: 49px;
+     margin-right: 27px;
+ }
+ 
+ 
+ #cont p{
+ 	padding-right: 117px;
+     padding-left: 411px;
+     color: black;
+ }
+ 
+ 
+ #cont a{
+ 	border: solid;
+     border-radius: 8px;
+     padding: 7px;
+     margin-left: 10px;
+     
+ }
+ 
+ 
+ #BTN{
+ 	padding-top: 23PX;
+ }
+ 
+ 
+ #HH{
+ 	font-size: 34px;
+     padding-bottom: 20px;
+     padding-right: 274px;
+ }
+ 
+ 
+ 
+ #TT{
+ 	font-size: 45px;
+     padding-left:52px;
+     padding-bottom: 43px;
+    text-decoration: underline;
+ 
+ }
+ 
+ #hom a{
+ 	color:#006dcc;
+ 	font-size: 20px; 
+     
+ } 
